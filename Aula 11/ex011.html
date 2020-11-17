@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Brasileiro ou Estrangeiro</title>
+	<style>
+	body{
+		background:rgb(100,100,255);
+		color:rgb(255,255,255);
+	}
+	h1{
+		background: rgb(170,170,255);
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+	}
+	p{
+		margin-top: 10px;
+		font:  normal 20pt Calibri;
+	}
+	</style>
+  </head>
+  <body>
+	<h1 id=h11>Em que país você nasceu?</h1>
+	Resposta: <input id="txtp"><input type="button" value="validar" onclick="validar()">
+	<div id="res"></div>
+  <script>
+	function validar(){
+		var res = document.getElementById("res")
+		var pais = document.getElementById('txtp').value 
+		if (pais == "Brasil" || pais == "brasil" || pais == "Brazil" || pais == "brazil"){
+			res.innerHTML = `<p>Morando no <strong>Brasil</strong> você é brasileiro </p>`
+		}else{
+			res.innerHTML = `<p>Morando em <strong>${pais}</strong> você é estrangeiro</p>`
+		}
+	}
+  </script>
+  </body>
+</html>
